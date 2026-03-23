@@ -1,0 +1,285 @@
+:root {
+  font-family: 'Georgia', 'Times New Roman', serif;
+  color: #edf2ff;
+  background:
+    radial-gradient(circle at top left, rgba(61, 105, 182, 0.38), transparent 30%),
+    radial-gradient(circle at bottom right, rgba(14, 165, 233, 0.2), transparent 24%),
+    linear-gradient(135deg, #040814 0%, #0b1220 46%, #050914 100%);
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.app-shell {
+  padding: 28px;
+}
+
+.hero-panel,
+.panel {
+  border: 1px solid rgba(154, 173, 220, 0.16);
+  background: rgba(6, 11, 25, 0.68);
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.38);
+  backdrop-filter: blur(18px);
+}
+
+.hero-panel {
+  display: grid;
+  grid-template-columns: 1.8fr 1fr;
+  gap: 24px;
+  align-items: end;
+  padding: 24px 28px;
+  margin-bottom: 20px;
+  border-radius: 28px;
+}
+
+.hero-panel h1,
+.panel h2 {
+  margin: 0;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+}
+
+.hero-panel h1 {
+  max-width: 11ch;
+  font-size: clamp(2rem, 4vw, 3.9rem);
+  line-height: 0.98;
+}
+
+.hero-copy,
+.supporting-text,
+.control-meta,
+.actuator-item span,
+.status-banner li,
+.status-banner p {
+  font-family: 'Trebuchet MS', 'Segoe UI', sans-serif;
+}
+
+.eyebrow {
+  margin: 0 0 10px;
+  color: #7dd3fc;
+  font-size: 0.82rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+}
+
+.hero-copy {
+  max-width: 68ch;
+  margin: 12px 0 0;
+  color: #c5d3ee;
+}
+
+.hero-metrics {
+  display: grid;
+  gap: 14px;
+}
+
+.hero-metrics div,
+.actuator-item,
+.control-row,
+.panel {
+  border-radius: 22px;
+}
+
+.hero-metrics div {
+  padding: 18px 20px;
+  background: linear-gradient(180deg, rgba(10, 18, 35, 0.9), rgba(8, 13, 23, 0.66));
+  border: 1px solid rgba(125, 211, 252, 0.16);
+}
+
+.hero-metrics span {
+  display: block;
+  margin-bottom: 6px;
+  font-family: 'Trebuchet MS', 'Segoe UI', sans-serif;
+  color: #8ea3ca;
+  font-size: 0.84rem;
+}
+
+.hero-metrics strong {
+  font-size: 1.2rem;
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: minmax(320px, 420px) 1fr;
+  gap: 24px;
+  align-items: start;
+}
+
+.left-column {
+  display: grid;
+  gap: 20px;
+  align-content: start;
+}
+
+.panel {
+  padding: 24px;
+}
+
+.panel-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: start;
+  margin-bottom: 18px;
+}
+
+.scene-header {
+  align-items: center;
+}
+
+.ghost-button {
+  border: 1px solid rgba(125, 211, 252, 0.34);
+  color: #e2f3ff;
+  background: rgba(13, 32, 54, 0.65);
+  border-radius: 999px;
+  padding: 10px 16px;
+  cursor: pointer;
+}
+
+.control-list,
+.actuator-list {
+  display: grid;
+  gap: 12px;
+}
+
+.control-row {
+  display: grid;
+  gap: 10px;
+  padding: 14px 16px;
+  background: rgba(13, 20, 38, 0.9);
+  border: 1px solid rgba(154, 173, 220, 0.1);
+}
+
+.control-meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  color: #9fb2d4;
+  font-size: 0.88rem;
+}
+
+.control-slider {
+  width: 100%;
+}
+
+.number-input-wrap {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 8px;
+  color: #b5c7ea;
+  font-family: 'Trebuchet MS', 'Segoe UI', sans-serif;
+}
+
+.number-input {
+  width: 112px;
+  padding: 9px 12px;
+  border-radius: 14px;
+  border: 1px solid rgba(154, 173, 220, 0.2);
+  background: rgba(2, 6, 17, 0.9);
+  color: inherit;
+}
+
+.actuator-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.actuator-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 16px;
+  background: rgba(13, 20, 38, 0.9);
+  border: 1px solid rgba(154, 173, 220, 0.1);
+}
+
+.actuator-item strong {
+  font-size: 1.06rem;
+}
+
+.actuator-item.is-danger {
+  border-color: rgba(251, 146, 60, 0.55);
+  box-shadow: inset 0 0 0 1px rgba(249, 115, 22, 0.25);
+}
+
+.status-banner.success {
+  border-color: rgba(74, 222, 128, 0.3);
+}
+
+.status-banner.warning {
+  border-color: rgba(251, 191, 36, 0.3);
+}
+
+.status-banner ul {
+  padding-left: 20px;
+  margin: 0;
+  color: #ffe6b5;
+}
+
+.scene-panel {
+  min-height: 680px;
+}
+
+.canvas-shell {
+  height: 620px;
+  border-radius: 22px;
+  overflow: hidden;
+  border: 1px solid rgba(154, 173, 220, 0.12);
+}
+
+@media (max-width: 1100px) {
+  .hero-panel,
+  .content-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .scene-panel {
+    min-height: auto;
+  }
+
+  .canvas-shell {
+    height: 520px;
+  }
+}
+
+@media (max-width: 720px) {
+  .app-shell {
+    padding: 16px;
+  }
+
+  .hero-panel,
+  .panel {
+    padding: 18px;
+    border-radius: 22px;
+  }
+
+  .panel-header,
+  .control-meta {
+    flex-direction: column;
+  }
+
+  .canvas-shell {
+    height: 420px;
+  }
+}
